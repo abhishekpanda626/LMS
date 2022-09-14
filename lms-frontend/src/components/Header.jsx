@@ -48,6 +48,7 @@ export default function Header() {
             {
                teacher===null && student===null  ?
                <>
+                <Nav.Link href='/'>Home</Nav.Link>
                <NavDropdown title="Login" id="basic-nav-dropdown">
               <NavDropdown.Item href="/teacher/login">Login as Teacher</NavDropdown.Item>
               <NavDropdown.Item href="/student/login">

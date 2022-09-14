@@ -121,7 +121,8 @@ let result=await fetch("http://localhost:8000/api/users/update/"+id+"?_method=PU
   </div>
   <input required type="text" className="form-control" placeholder="contact no" aria-label="Contact" 
   aria-describedby="basic-addon1"
-  defaultValue={data.contact_no}
+  defaultValue={data.contact_no} 
+  disabled
   onChange={(e)=>{setContact(e.target.value)}}
   />
 </div>

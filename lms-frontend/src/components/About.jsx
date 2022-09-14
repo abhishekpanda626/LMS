@@ -34,7 +34,7 @@ useEffect( ()=>{
 <div className="image__overlay image__overlay--primary">
         <div className="image__title">Library <span style={{color:'red'}}>Management</span> System</div>
         <p className="image__description">
-          <small>A portal where teacher can register students to the library,update their data,remove and  assign books to them.</small>
+          <small>Forget Netflix and Chill, Read a Book Instead</small>
         </p>
     </div>
         <div className="container-xxl">

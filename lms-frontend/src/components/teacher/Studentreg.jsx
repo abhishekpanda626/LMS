@@ -60,14 +60,12 @@ formdata.append('contact_no',contact);
 formdata.append('email',email);
 formdata.append('password',password);
 formdata.append('file_path',file);
-//formdata.append('image',file);
-//console.log(formdata);
 let result=await fetch("http://localhost:8000/api/register/user",{
     method:'POST',
   body:formdata}
   )
   let err=await result.json();
-  console.warn("error",err.validate_err);
+  //console.warn("error",err.validate_err);
   if(result.status===201)
   {
     Swal.fire({

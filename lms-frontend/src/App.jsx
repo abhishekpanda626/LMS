@@ -5,7 +5,6 @@ import Tlogin from './components/teacher/Tlogin';
 import Slogin from './components/student/Slogin';
 import Showbooks from './components/books/Showbooks';
 import Sprofile from './components/student/Sprofile';
-import Tprofile from './components/teacher/Tprofile';
 import Teacherreg from './components/teacher/Teacherreg';
 import Studentreg from './components/teacher/Studentreg';
 import About from './components/About';
@@ -27,10 +26,10 @@ function App() {
       <Header/>
       <Routes>
       <Route path='/' element={<About/>} />
-
+      <Route path='*' element={<About/>} />
+      
       <Route element={<Teacher/>}>
       <Route path='/student/signup' element={<Studentreg/>} />
-      <Route path='/teacher/profile' element={<Tprofile/>} />
       <Route path='/books/manage' element={<Managebooks/>} />
       <Route path='/books/add' element={<Addbooks/>} />
       <Route path='/books/update' element={<UpdateBooks/>} />

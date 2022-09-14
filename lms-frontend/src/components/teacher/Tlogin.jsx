@@ -73,9 +73,7 @@ else if(result.status===202)
  setError(final.validate_err);
 }
 
-//console.log(result);
 
-//navigate('/');
 }
     return(
        

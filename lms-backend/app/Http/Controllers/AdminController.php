@@ -15,7 +15,7 @@ class AdminController extends Controller
             'name' => 'required|min:3|unique:admins',
             'email' => 'required|email|unique:admins',
             'password' =>'required',
-            'file_path'=>'required'
+            
             
         ]);
         if($validator->fails())

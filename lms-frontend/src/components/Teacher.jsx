@@ -3,10 +3,11 @@ import { Link,useNavigate } from 'react-router-dom';
 import { Outlet, Navigate } from 'react-router-dom'
 
 const Teacher = () => {
-    let auth = localStorage.getItem('teacher-info')
+    let auth = localStorage.key(0);
+    console.log("auth:",auth)
     return(
         
-        auth ? <Outlet/> : <Navigate to="/teacher/login"/>
+        auth==="teacher-info" ? <Outlet/> : <Navigate to="/"/>
     )
 }
 

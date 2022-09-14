@@ -17,13 +17,14 @@ use App\Http\Controllers\BooksUsersController;
 |
 */
  Route::group(['middleware'=>'auth:api'],function () {
-   Route::get('/books/display',[BookController::class,'display']);
+  
 });
 
 // Route::middleware('auth:api')->group(function () {
     
 // });
 Route::post('/register/user',[UserController::class,'register']);
+Route::get('/books/display',[BookController::class,'display']);
 Route::post('/login/user',[UserController::class,'userlogin']);
 Route::post('/register/admin',[AdminController::class,'adminreg']);
 Route::post('/login/admin',[AdminController::class,'adminlogin']);

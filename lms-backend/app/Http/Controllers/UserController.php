@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Book;
+//use App\Models\Book;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -25,14 +25,16 @@ class UserController extends Controller
         {
             return response()->json(['validate_err'=>$validator->messages()]);
         }
+        
         $user=new User;
         $user->name=$req->input('name');
         $user->contact_no=$req->input('contact_no');        
         $user->email=$req->input('email');
         $user->password=Hash::make($req->input('password'));
         $user->file_path=$req->file('file_path')->store('user');
-        $user->save();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      oken;
+        $user->save();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         return $user;
+        
     }
     function userlogin(Request $req)
     {
@@ -53,7 +55,7 @@ class UserController extends Controller
         }
         else
         {
-            $token = $user->createToken('user-token')->accessToken;
+            //$token = $user->createToken('user-token')->accessToken;
             return $user;
         }
         
@@ -93,7 +95,6 @@ class UserController extends Controller
             $user->name=$req->input('name');
             $user->contact_no=$req->input('contact_no');
             $user->email=$req->input('email');
-            $user->book_id=$req->input('book_id');
             $user->password=Hash::make($req->input('password'));
         if($req->file('image'))
             {$user->file_path=$req->file('image')->store('user');}

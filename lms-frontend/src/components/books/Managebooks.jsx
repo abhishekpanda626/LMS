@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import './teacher.css';
 export default function Managebooks(){
@@ -102,8 +104,9 @@ function showQuery()
    
 <span style={{marginTop:'60px',marginLeft:'400px',font:'60px bold sans-serif ',color:"yellowgreen"}}  >BOOKS</span>
 <div style={{marginLeft:'390px',marginTop:'30px'}}>
-  <input  type="text" placeholder="search.." name="search" id="search" onChange={(e)=>{search(e.target.value)}}/>
- </div>
+ 
+<span style={{border:' solid 2px',borderRight:'none' ,padding:'4px'}} ><FontAwesomeIcon icon={faMagnifyingGlass} /> </span>
+<input style={{borderLeft:'none'}}  type="text" placeholder="search.." name="search" id="search" onChange={(e)=>{search(e.target.value)}}/> </div>
     <button className='btn btn-primary' onClick={(e)=>addHandler(e)}  style={{ marginTop:'30px',marginLeft:'900px'}}>
       Add new book
     </button>
