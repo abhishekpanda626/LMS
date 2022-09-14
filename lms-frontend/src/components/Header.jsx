@@ -3,6 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 export default function Header() {
   var student=JSON.parse(localStorage.getItem('student-info'));
   var teacher=JSON.parse(localStorage.getItem('teacher-info'));
@@ -14,7 +18,7 @@ export default function Header() {
   return (
     <Navbar sticky="top" bg="dark"  variant="dark" expand="lg">
       <Container fluid="xxl">
-        <Navbar.Brand >Library Management System</Navbar.Brand>
+        <Navbar.Brand >  <FontAwesomeIcon icon={faBookOpen} /> Library Management System</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -34,7 +38,7 @@ export default function Header() {
                  <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/books/manage'>Books</Nav.Link>
               <Nav.Link href="/manage/students">
-                Manage Students
+               Students
               </Nav.Link>
             
               </>
@@ -60,12 +64,12 @@ export default function Header() {
               <>
 <Navbar.Collapse className="justify-content-end text-white" >
 <Navbar.Text className='text-white-50'>
-              Signed in as &nbsp;
+              Signed in as <FontAwesomeIcon icon={faUser} />&nbsp;
               </Navbar.Text>
 <NavDropdown title={student && student.name+'(student)'  || teacher && teacher.name +'(teacher)'} id="basic-nav-dropdown">             
               <NavDropdown.Item href="/student/profile">Dashboard</NavDropdown.Item>
               <NavDropdown.Item onClick={logout}>
-                Logout
+                Logout <FontAwesomeIcon icon={faRightFromBracket} />
               </NavDropdown.Item>
             </NavDropdown>
             

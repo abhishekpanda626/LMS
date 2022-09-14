@@ -5,8 +5,8 @@ import MyImage3 from './bg4.jpg';
 import React, { useState, useEffect } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default function About() {
 const [books,setBooks]=useState([]);
 
@@ -60,12 +60,10 @@ useEffect( ()=>{
         </div>
         </div>
         <footer>
-          <section>
-            
-          </section>
-        <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
+         
+        <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.16)"}}>
     © 2022 Copyright:
-    <a href="" className='text-dark' id="logo"><span className="text-reset " >&emsp;<span> <FontAwesomeIcon icon={faGithub} />  </span>Abhishekpanda626</span> </a> 
+    <a href="https://github.com/abhishekpanda626/LMS" className='text-dark' id="logo"><span className="text-reset " >&emsp;<span> <FontAwesomeIcon icon={faGithub} />  </span>Abhishekpanda626</span> </a> 
   </div> 
         </footer>
       
