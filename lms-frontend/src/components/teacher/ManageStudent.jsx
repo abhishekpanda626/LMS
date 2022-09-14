@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import './teacher.sass';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faUserMinus } from '@fortawesome/free-solid-svg-icons';
 export default function Manage(){
 const [data,setData]=useState([]);
 const navigate=useNavigate();
@@ -49,7 +50,7 @@ const addHandler=()=>{
 <div className='container' >
 <span style={{marginTop:'60px',marginLeft:'400px',font:'60px bold sans-serif ',color:"yellowgreen"}}  >STUDENTS</span>
     <button className='btn btn-primary' onClick={(e)=>addHandler(e)}  style={{ marginTop:'30px',marginLeft:'900px'}}>
-      Add new 
+    <FontAwesomeIcon icon={faUserPlus} />
     </button>
   </div>
 <table className="table table-hover m-md-5">
@@ -73,8 +74,8 @@ const addHandler=()=>{
       <td>{user.contact_no}</td>
       <td>{user.email}</td>
       <td>
-      <button className='btn btn-info' onClick={(e)=>updateHandler(user.id)}>Update</button> &emsp;
-        <button className='btn btn-danger' onClick={(e)=>deleteHandler(user.id)}>Remove</button>
+      <button className='btn btn-info' onClick={(e)=>updateHandler(user.id)}>Edit</button> &emsp;
+        <button className='btn btn-danger' onClick={(e)=>deleteHandler(user.id)}><FontAwesomeIcon icon={faUserMinus} /></button>
       </td>
      
     </tr>
