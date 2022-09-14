@@ -17,7 +17,7 @@ use App\Http\Controllers\BooksUsersController;
 |
 */
  Route::group(['middleware'=>'auth:api'],function () {
-   
+   Route::get('/books/display',[BookController::class,'display']);
 });
 
 // Route::middleware('auth:api')->group(function () {
