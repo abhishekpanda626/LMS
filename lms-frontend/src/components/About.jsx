@@ -41,17 +41,21 @@ useEffect( ()=>{
       <div className="album py-5 bg-light"> 
           <div className="row ">
           {books.map((book)=>(
-            
-             <div id="#container" className="col-md-4 "  key={book.id}>
-             <div className="card mb-4  box-shadow" id='card'>
-               <img id="#image" className="card-img-top" src={`http://localhost:8000/${book.file_path}`} alt="Card image" height={300}/>
-               <div className="card-body">
-                 <p className="card-text" style={{fontFamily:'Audiowide",sans-serif',fontSize:'25px'}}>{book.title}</p><p className="text-muted"> by {book.author} </p>
+            <div className=" col m-4" key={book.id}>
+            <div className="card" style={{width: "18rem"}}>
+              <img className="card-img-top" src={`http://localhost:8000/${book.file_path}`}  height={230}  alt="Card image cap"/>
+              <div className="card-overlay">
+                <div className='center text-white'>
+                 <p className='card-title '>{book.title}
+                 <small className=' card-text text-info'> by {book.author}</small>
+                 
+                 </p>
+                  </div>
+              </div>
              
-               </div>
-             </div>
+            </div>
            </div>
-         
+    
          ))
         }
         </div>

@@ -4,10 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\books_users;
+use Illuminate\Support\Facades\Validator;
 class BooksUsersController extends Controller
+
 {
     function assign(Request $req)
    {
+    $validator= Validator::make($req->all(),[
+     
+        'user_id' => "unique:books_users",
+    ]);
+    if($validator->fails())
+    {
+        return response()->json(['validate_err'=>$validator->messages()],202);
+    }
+    
         
          $assign=new books_users;
         $assign->book_id=$req->input('book_id');

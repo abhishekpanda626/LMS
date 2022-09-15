@@ -11,13 +11,16 @@
   position: relative;
   width: 400px;
 }
+#container{
+  position:relative;
+}
 
 .image__img {
   display: block;
   width: 100%;
 }
 
-.image__overlay {
+.image__overlay{
   position: absolute;
   top: 0;
   left: 0;
@@ -67,4 +70,32 @@
 a:link{
   text-decoration: none;
 
+}
+.card-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.509);
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+.card-title{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.card-text{
+  font-size: 0.7em;
+}
+.desc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

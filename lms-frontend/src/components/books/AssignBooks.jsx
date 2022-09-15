@@ -61,6 +61,17 @@ async function assignBook()
       })
       navigate('/books/manage');
     }
+    else if(result.status===202){
+      Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: `Can't add duplicate values`,
+          text:'please try again.',
+          showConfirmButton: false,
+          timer: 1500
+          
+        })
+  }
     else{
         Swal.fire({
             position: 'center',
