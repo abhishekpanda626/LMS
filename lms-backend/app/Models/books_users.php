@@ -13,7 +13,7 @@ class books_users extends Model
         'book_id',
         'user_id'
     ];
-    protected $with=['book'];
+    protected $with=['book','user'];
     public function user()
    {
        return $this->belongsTo(User::class);

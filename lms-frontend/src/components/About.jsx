@@ -45,7 +45,7 @@ useEffect( ()=>{
             <div className="card" style={{width: "18rem"}}>
               <img className="card-img-top" src={`http://localhost:8000/${book.file_path}`}  height={230}  alt="Card image cap"/>
               <div className="card-overlay">
-                <div className='center text-white'>
+                <div className=' text-white'>
                  <p className='card-title '>{book.title}
                  <small className=' card-text text-info'> by {book.author}</small>
                  

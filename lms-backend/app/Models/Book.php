@@ -16,10 +16,6 @@ class Book extends Model
         'file_path'
     ];
 
-   public function user()
-   {
-       return $this->hasMany(User::class);
-   }
    public function books_users()
    {
        return $this->hasMany(books_users::class);

@@ -22,5 +22,6 @@
     </head>
 <body>
     <center><h1>Library Management System</h1></center>
+    {{  Book::id }}
 </body>
 </html>

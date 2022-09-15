@@ -7,6 +7,9 @@ use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+
+use Symfony\Component\HttpFoundation\Response;
+
 class AdminController extends Controller
 {
     function adminreg(Request $req)
@@ -54,4 +57,5 @@ class AdminController extends Controller
 
        
     }
+  
 }
