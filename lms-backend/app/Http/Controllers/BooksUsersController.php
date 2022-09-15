@@ -30,12 +30,12 @@ class BooksUsersController extends Controller
         $assign->save();
                
             $books = with(books_users::where('id','LIKE',"%$assign->user_id%")->first());
-            $title=$books->book->title;
-            $mail=$books->user->email;
-        Mail::send('Email.bookAssigned', $assign->toArray(),$mail, function ($message) {
+         //   $title=$books->book->title;
+           $mail=$books->user->email;
+        Mail::send('Email.bookAssigned', $assign->toArray(), function ($message) {
             $message->from('book@lms.com', 'admin_lms');
     //      $message->sender('john@johndoe.com', 'John Doe');
-            $message->to( $mail, "sender");
+            $message->to( "sender@gmail.com", "sender");
    //         $message->cc('john@johndoe.com', 'John Doe');
    //         $message->bcc('john@johndoe.com', 'John Doe');
   //          $message->replyTo('john@johndoe.com', 'John Doe');  
