@@ -7,6 +7,7 @@ use App\Models\books_users;
 use App\Models\Book;
 use App\Models\User;
 use App\Mail\AssignMail;
+use App\Mail\ReturnMail;
 //use App\Http\Controller\MailController;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
@@ -42,6 +43,12 @@ class BooksUsersController extends Controller
   }
    }
    function delete($id){
+     $books = with( books_users::where('id',$id))->first();     
+     $title =$books->book->title;
+            $name=$books->user->name;
+            $email=$books->user->email;
+            $message=['name'=>$name,'title'=>$title];
+        Mail::to($email,$name)->send(new ReturnMail($message));
     $result= books_users::where('id',$id)->delete();
     if($result)
     {

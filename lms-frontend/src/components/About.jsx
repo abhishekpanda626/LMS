@@ -67,7 +67,7 @@ useEffect( ()=>{
          
         <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.16)"}}>
     © 2022 Copyright:
-    <a href="https://github.com/abhishekpanda626/LMS" className='text-dark' id="logo"><span className="text-reset " >&emsp;<span> <FontAwesomeIcon icon={faGithub} />  </span>Abhishekpanda626</span> </a> 
+    <a href="https://github.com/abhishekpanda626/LMS" target={"_blank"} className='text-dark' id="logo"><span className="text-reset " >&emsp;<span> <FontAwesomeIcon icon={faGithub} />  </span>Abhishekpanda626</span> </a> 
   </div> 
         </footer>
       

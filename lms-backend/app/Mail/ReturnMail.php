@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class AssignMail extends Mailable
+class ReturnMail extends Mailable
 {
     use Queueable, SerializesModels;
   
@@ -31,6 +31,6 @@ class AssignMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('LMS | Book is Assigned ')->view('Email.bookAssigned');
+        return $this->subject('LMS | Book Return Request ')->view('Email.bookReturned');
     }
 }

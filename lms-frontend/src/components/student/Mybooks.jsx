@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
 export default function Show()
 {
     var user=JSON.parse(localStorage.getItem('student-info'));
@@ -20,11 +21,24 @@ export default function Show()
     },[])
     async function deleteHandler(e,id){
         e.preventDefault();
-         await fetch("http://localhost:8000/api/delete/"+id,{method:'DELETE'});
-        fetchbooks();
-        }
-       
-  console.log(book);
+         let result=await fetch("http://localhost:8000/api/delete/"+id,{method:'DELETE'});
+
+         console.log(result);
+       if(result.status===200)
+       {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: `book return requested`,
+          text:'wait for confirmation mail to return the book',
+          showConfirmButton: false,
+          timer: 3000
+        })
+     
+       }
+       fetchbooks();
+      };
+  
     return(
         <div className="container">
 
