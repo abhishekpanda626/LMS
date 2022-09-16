@@ -50,13 +50,13 @@ async function assignBook()
       body:JSON.stringify(data)
     });
     console.warn(result.status)
-    if(result.status===200)
+    if(result.status===201)
     {
       Swal.fire({
         position: 'center',
         icon: 'success',
-        title: `${book.title} book is assigned`  ,
-        text:'return the book within 10 days'
+        title: `${book.title} 📙  book is assigned.`  ,
+        text:'A room without books is like a body without a soul.'
         
       })
       navigate('/books/manage');
