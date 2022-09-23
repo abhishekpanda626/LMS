@@ -7,8 +7,8 @@ A portal where teacher can register students to the library,update their data,re
 ### Checking your version of npm and Node.js 
 `$node -v`
 `$npm -v`
-### install laravel
-You can folllow steps to install and setup laravel from  [here](https://laravel.com/docs/4.2#:~:text=Via%20Download,all%20of%20the%20framework's%20dependencies.)
+### install php and mariadb server
+
 ## Modify .env file
 > modify database name with your username and password 
 ## run
