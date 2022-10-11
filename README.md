@@ -3,7 +3,7 @@ A portal where teacher can register students to the library,update their data,re
 
 # prerequisite
 ### install npm
-`$npm install -g npm`
+`$npm install`
 ### Checking your version of npm and Node.js 
 `$node -v`
 `$npm -v`
